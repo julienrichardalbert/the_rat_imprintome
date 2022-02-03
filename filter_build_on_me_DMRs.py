@@ -1,3 +1,9 @@
+# uses python to filter large tabular data, such as those from RNA-seq and WGBS
+# columns have to be in a very specific order (count, mean, range)
+# data generated from bedmapCoverage.sh
+# change parameters below to alter filtering thresholds
+# the ones shown were the ones used in the paper (for the coordinates in the script filename)
+
 # python ./filter_build_on_me.py > input_file_filtered.txt
 # 0 = 1
 # x = 24
