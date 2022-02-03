@@ -1,3 +1,7 @@
+# uses python to filter large tabular data, such as those from RNA-seq and WGBS
+# also calculates the allelic ratio of an expressed gene (pat/(mat+pat))
+# columns have to be in a very specific order (RPKM first, then allelic coverage)
+
 # python ./filter_build_on_me.py > input_file_fileted.txt
 # 0 = 1
 # x = 24
@@ -24,8 +28,8 @@ col_indices       = numpy.arange(first_data_col, first_allelic_col, 1)
 #print(allelic_col_indices)
 
 # defaults
-#bam_RPKM_filter = 1 				# visrseq calculated on q255 rmDup bam
-#bigwig_allelic_RPM_filter = 50 		# visrseq calculated on allelic RPM normalized bigiwg, where read_length=1
+bam_RPKM_filter = 1 				# visrseq calculated on q255 rmDup bam
+bigwig_allelic_RPM_filter = 50 		# visrseq calculated on allelic RPM normalized bigiwg, where read_length=1
 
 
 # import file
