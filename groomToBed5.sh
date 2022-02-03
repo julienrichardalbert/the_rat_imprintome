@@ -4,7 +4,7 @@
 # this script converts bigwig, bedgraph or bed files to "bed5" format
 # which is simply: 
 # chr	start	end	name	score
-# this is my special little format used by bamCoverage_simplified.sh
+# this is my special little format used by bedmapCoverage.sh
 
 
 # Check the number of command line arguments
