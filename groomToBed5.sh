@@ -1,5 +1,12 @@
 #!/bin/bash
 # JRA 2018
+
+# this script converts bigwig, bedgraph or bed files to "bed5" format
+# which is simply: 
+# chr	start	end	name	score
+# this is my special little format used by bamCoverage_simplified.sh
+
+
 # Check the number of command line arguments
 if [ $# -ne 1 ]; then
 	script_name=$(basename $0)
