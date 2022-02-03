@@ -1,3 +1,7 @@
+# make beautiful scatterplots using a combination of matplot (2D scatter) and seaborn (contour plot)
+# input file is a tab-delimited table of DNAme and RPKM data
+# change the "subset_count" variable to display a specified number of dots.
+# 10000 dots was a healthy number for my laptop
 
 import sys
 import pandas as pd
