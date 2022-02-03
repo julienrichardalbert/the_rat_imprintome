@@ -1,7 +1,11 @@
 #!/bin/bash
 # JRA 2018
-# Check the number of command line arguments
 
+# this script converts variant-call files (VCF) that carry both SNV and INDEL information into bigwig format
+# this was before I discovered bigBed files! 
+
+
+# Check the number of command line arguments
 if [ $# -ne 2 ]; then
 	script_name=$(basename $0)
 	echo "Usage: $script_name input_vcf chrom.sizes"
@@ -9,12 +13,17 @@ if [ $# -ne 2 ]; then
 fi
 
 # REQUIREMENTS
-# 
+# bedtools, bedGraphToBigWig
 
+
+# INPUT vcf and chromosome size (of reference genome) files
 INPUT_FILE=$1
+SIZES=$2
+
+
 FILE=$(basename "$INPUT_FILE")
 FILE="${FILE%.*}"
-SIZES=$2
+
 
 
 #CHROM  POS     ID      REF     ALT     QUAL    FILTER  INFO    FORMAT  C57BL_6NJ
