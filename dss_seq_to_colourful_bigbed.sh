@@ -1,6 +1,12 @@
 #!/bin/bash
 # JRA 2021
 
+# use DSSseq to identify DMRs between parental alleles of an F1 hybrid individual
+# this script converts the output of DSSseq (a large .csv file) into a bigBed that can be visualized on a genome browser
+# uses UCSC bigBed file conventions
+# color data points by statistical significance and parental bias in DNAme levels
+
+
 # Check the number of command line arguments
 if [ $# -ne 2 ]; then
 	script_name=$(basename $0)
