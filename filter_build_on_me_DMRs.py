@@ -13,7 +13,7 @@ import numpy
 firstarg=sys.argv[1]
 
 # number of first data column (usually COUNT) minus one
-first_data_column = 5
+first_data_column = 4
 # number of total columns minus two
 last_data_column = 21
 column_indices = numpy.arange(first_data_column, last_data_column, 3)
