@@ -1,6 +1,12 @@
 #!/bin/bash
 # JRA 2021
 
+# this script merges bams files generated from replicate samples
+# works on bigwigs too but I don't really recommend it unless bam files are nowhere to be found
+# run examples are kind of shit... please email me if this would be useful for you but are having trouble running it
+# can be run on a directory of bam files (checks for unique names) or a subset of your choice
+
+
 # Check the number of command line arguments
 if [ $# -ne 3 ]; then
 	script_name=$(basename $0)
