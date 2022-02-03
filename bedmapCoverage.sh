@@ -1,6 +1,12 @@
 #!/bin/bash
 # JRA 2018
 
+# a convoluted wrapped for the bedmapCoverage tool (from BEDOPS)
+# https://bedops.readthedocs.io/en/latest/content/reference/statistics/bedmap.html
+
+# requires bed files to be in "bed5" format (see groomToBed5.sh)
+
+
 # Check the number of command line arguments
 if [ $# -ne 3 ]; then
 	script_name=$(basename $0)
